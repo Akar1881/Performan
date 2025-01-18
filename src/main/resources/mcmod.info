@@ -1,0 +1,16 @@
+[
+{
+  "modid": "performan",
+  "name": "Performan",
+  "description": "A performance optimization mod for Minecraft that helps reduce lag and improve FPS.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Akar1881"],
+  "credits": "",
+  "logoFile": "assets/icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
