@@ -1,0 +1,104 @@
+# Performan Changelog
+
+## Version 1.1.0 (Latest)
+
+### ✨ New Features
+- Added FPS drop handler for Android devices
+- Implemented smart screen movement detection
+- Added adaptive sensitivity control
+- Introduced dynamic GL state optimization
+- Added frame skip system for low FPS scenarios
+- Implemented movement-based render distance adjustment
+
+### 🚀 Performance Improvements
+- Significantly reduced FPS drops during rapid screen movement
+- Optimized rendering pipeline for Android devices
+- Enhanced CPU load management
+- Improved memory usage during rapid movement
+- Added smart GL state management
+- Implemented adaptive frame skipping
+
+### 🛠️ Technical Improvements
+- Added FPS history tracking system
+- Implemented movement threshold detection
+- Created GL state optimization system
+- Added sensitivity adjustment system
+- Improved render distance management
+- Enhanced Android device detection
+
+### 🎮 Quality of Life
+- Smoother camera movement during rapid screen rotation
+- Reduced stuttering during quick turns
+- Better handling of sudden movements
+- Improved overall responsiveness
+- Enhanced touch input handling
+
+### 🐛 Bug Fixes
+- Fixed FPS drops during rapid screen movement
+- Resolved stuttering issues during quick turns
+- Fixed sensitivity issues during rapid movement
+- Corrected GL state management
+- Improved frame timing consistency
+
+## Version 1.0.0 (Initial Release)
+
+### ✨ New Features
+- Implemented custom video settings menu
+- Added smart particle system management
+- Introduced optimized explosion effects
+- Created efficient chunk loading system
+- Added Android-specific CPU optimizations
+- Implemented dynamic render distance
+- Added Adreno GPU optimizations
+- Introduced Fast Math option
+- Added customizable performance settings
+
+### 🚀 Performance Improvements
+- Optimized chunk loading for Android devices
+- Reduced memory usage during gameplay
+- Improved FPS stability during rapid movement
+- Enhanced explosion particle optimization
+- Reduced GPU strain on mobile devices
+- Implemented smart memory management
+- Added adaptive performance scaling
+- Optimized texture loading system
+
+### 🛠️ Technical Improvements
+- Added movement-based optimization system
+- Implemented priority-based chunk loading
+- Created dynamic FPS stabilization
+- Added smart garbage collection
+- Implemented chunk queue management
+- Added render distance auto-adjustment
+- Created memory leak prevention system
+- Implemented efficient particle culling
+
+### 🎮 Quality of Life
+- Added configurable settings key (default: 'P')
+- Implemented scrollable settings menu
+- Added real-time setting preview
+- Created device-specific presets
+- Added performance monitoring
+- Implemented automatic settings saving
+- Added smooth GUI scaling
+- Created intuitive controls layout
+
+### 🐛 Bug Fixes
+- Fixed FPS drops during rapid screen movement
+- Resolved memory leaks in chunk loading
+- Fixed particle rendering issues
+- Corrected explosion effect bugs
+- Resolved Android-specific rendering issues
+- Fixed settings save/load problems
+- Corrected chunk update timing
+- Fixed GUI scaling issues
+
+### 💻 Compatibility
+- Added OptiFine compatibility
+- Ensured Forge compatibility
+- Verified Android device support
+- Added broad mod compatibility
+- Implemented fallback systems
+- Added version checking
+- Created compatibility warnings
+- Added device detection

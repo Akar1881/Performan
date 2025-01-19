@@ -16,6 +16,8 @@ import net.minecraft.client.gui.GuiVideoSettings;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import com.performan.gui.CustomVideoSettings;
 import com.performan.optimization.ExplosionReduce;
+import com.performan.optimization.CPUReduce;
+import com.performan.optimization.FPSDrop;
 
 @Mod(
     modid = MainModClass.MODID,
@@ -25,13 +27,13 @@ import com.performan.optimization.ExplosionReduce;
 )
 public class MainModClass {
     public static final String MODID = "performan";
-    public static final String NAME = "Performance Optimizer";
+    public static final String NAME = "Performan Optimizer";
     public static final String VERSION = "1.0.0";
 
     private static final KeyBinding TOGGLE_SETTINGS = new KeyBinding(
         "Open Performance Settings",
         Keyboard.KEY_P,
-        "Performance Optimizer"
+        "Performan Optimizer"
     );
 
     private int tickCounter = 0;
@@ -41,6 +43,8 @@ public class MainModClass {
     public void preInit(FMLPreInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ExplosionReduce());
+        MinecraftForge.EVENT_BUS.register(new CPUReduce());
+        MinecraftForge.EVENT_BUS.register(new FPSDrop());
     }
 
     @EventHandler

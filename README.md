@@ -11,6 +11,8 @@
 - Efficient memory usage
 - Reduced GPU strain
 - Customizable performance settings
+- Android-specific optimizations
+- FPS drop prevention during rapid movement
 
 ### Enhanced Settings Menu
 - Intuitive video settings interface
@@ -19,6 +21,17 @@
 - Advanced texture management
 - FPS limiting options
 - VSync controls
+- Dynamic chunk loading controls
+
+### Android-Specific Features
+- Smart CPU load reduction
+- Dynamic render distance
+- Adaptive chunk loading
+- Movement-based optimizations
+- Memory usage optimization
+- FPS stabilization during rapid movement
+- Smart screen movement detection
+- Adaptive sensitivity control
 
 ## 🔧 Installation
 
@@ -48,27 +61,6 @@ Press 'P' (default key, configurable) to open the Performan Settings menu.
 - Compatible with OptiFine
 - No known major mod conflicts
 
-## 🐛 Reporting Issues
-
-Please report bugs on our GitHub Issues page with:
-1. Detailed description of the problem
-2. Steps to reproduce
-3. System specifications
-4. Mod version and Forge version
-5. Relevant crash reports/logs
-
-## 🤝 Contributing
-
-We welcome contributions! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 📊 Performance Impact
 
 Typical performance improvements:
@@ -76,6 +68,36 @@ Typical performance improvements:
 - Up to 60% reduction in explosion lag
 - Significant memory usage optimization
 - Reduced GPU load
+- Smoother chunk loading on Android devices
+- Stable FPS during rapid screen movement
+- Improved touch input responsiveness
+- Enhanced movement smoothness
+
+## 🎯 Recommended Settings
+
+### Low-End Android Devices:
+- Particle Level: Minimal
+- Shadow Quality: OFF
+- Texture Quality: Low
+- Fast Math: ON
+- Chunk Updates: 1
+- Adreno Optimizations: ON
+
+### Mid-Range Android Devices:
+- Particle Level: Decreased
+- Shadow Quality: Fast
+- Texture Quality: Medium
+- Fast Math: ON
+- Chunk Updates: 2
+- Adreno Optimizations: ON
+
+### High-End Android Devices:
+- Particle Level: All
+- Shadow Quality: Fast
+- Texture Quality: High
+- Fast Math: Optional
+- Chunk Updates: 2-3
+- Adreno Optimizations: Optional
 
 ## 🔗 Links
 
@@ -83,7 +105,11 @@ Typical performance improvements:
 - [GitHub Repository](https://github.com/Akar1881/Performan)
 - [Bug Reports](https://github.com/Akar1881/Performan/issues)
 
+## 📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 ## 🌟 Credits
 
-Created by [Akar1881]
+Created by Akar1881
 Special thanks to the Minecraft Forge team and the modding community.

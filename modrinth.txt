@@ -1,6 +1,6 @@
 # Performan
 
-A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS and reduces lag without compromising gameplay quality.
+A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS and reduces lag without compromising gameplay quality. Specially optimized for Android devices!
 
 ## ✨ Features
 
@@ -13,6 +13,10 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - Intelligent particle system management
 - Memory leak prevention
 - Optimized rendering pipeline
+- Android-specific CPU optimizations
+- FPS drop prevention system
+- Smart movement detection
+- Adaptive sensitivity control
 
 ### ⚙️ Custom Video Settings Menu
 - Replace vanilla video settings with an enhanced menu
@@ -24,14 +28,19 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - Intuitive scrollable interface
 - Real-time setting preview
 
-### 🎮 Quality of Life Features
-- Player nametag visibility improvements
-- Persistent settings configuration
-- FPS limit controls
-- VSync toggle
-- Fast math calculations
-- Smooth GUI scaling
-- Enhanced menu navigation
+### 📱 Android-Specific Features
+- Smart CPU load management
+- Dynamic render distance adjustment
+- Movement-based chunk loading optimization
+- FPS stabilization during rapid movement
+- Memory usage optimization
+- Adaptive performance scaling
+- Smooth screen rotation handling
+- Touch input optimization
+- Smart GL state management
+- Frame skip system for low FPS
+- Movement threshold detection
+- Adaptive sensitivity control
 
 ## 🔧 Technical Details
 
@@ -42,24 +51,30 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - Memory usage optimization
 - GPU strain reduction
 - Frame time stabilization
+- Android-specific CPU optimizations
+- FPS history tracking
+- GL state optimization
+- Movement-based adjustments
 
 ### Compatibility
 - Works seamlessly with OptiFine
 - Compatible with most 1.8.9 mods
 - No known conflicts with major mods
 - Forge compatibility verified
+- Tested on various Android devices
 
 ### System Requirements
 - Minecraft: 1.8.9
 - Forge: 11.15.1.2318 or later
 - Java 8 or higher
-- Any operating system that runs Minecraft
+- Android 5.0 or higher (for mobile features)
 
 ### Configuration
 - Press 'P' to access settings (configurable)
 - All settings save automatically
 - Real-time performance monitoring
 - Easy-to-use interface
+- Android-optimized controls
 
 ## 📈 Performance Impact
 
@@ -70,29 +85,35 @@ Typical improvements:
 - Reduced GPU load
 - Smoother chunk loading
 - More stable frame times
+- Improved Android performance
+- Enhanced movement smoothness
+- Better touch input responsiveness
 
 ## 🎯 Recommended Settings
 
-### Low-End PCs:
+### Low-End Android:
 - Particle Level: Minimal
 - Shadow Quality: OFF
 - Texture Quality: Low
 - Fast Math: ON
-- Chunk Updates: 1-2
+- Chunk Updates: 1
+- Adreno Optimizations: ON
 
-### Mid-Range PCs:
+### Mid-Range Android:
 - Particle Level: Decreased
 - Shadow Quality: Fast
 - Texture Quality: Medium
 - Fast Math: ON
-- Chunk Updates: 2-3
+- Chunk Updates: 2
+- Adreno Optimizations: ON
 
-### High-End PCs:
+### High-End Android:
 - Particle Level: All
-- Shadow Quality: Fancy
+- Shadow Quality: Fast
 - Texture Quality: High
 - Fast Math: Optional
-- Chunk Updates: 3-5
+- Chunk Updates: 2-3
+- Adreno Optimizations: Optional
 
 ## 🔍 Known Issues
 
