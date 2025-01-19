@@ -168,8 +168,23 @@ public class CustomVideoSettings extends GuiScreen implements GuiResponder {
             "Fast Math: " + (useFastMath ? "ON" : "OFF")));
 
         currentY += spacing;
+        this.buttonList.add(new GuiButton(10, width / 2 - 100, currentY, buttonWidth, buttonHeight,
+            "FPS Limit: " + getFpsLimitString()));
+
+        currentY += spacing;
         this.buttonList.add(new GuiButton(9, width / 2 - 100, currentY, buttonWidth, buttonHeight,
             "Done"));
+    }
+
+    private String getFpsLimitString() {
+        switch (fpsLimit) {
+            case 0: return "Unlimited";
+            case 30: return "30";
+            case 60: return "60";
+            case 120: return "120";
+            case 240: return "240";
+            default: return String.valueOf(fpsLimit);
+        }
     }
 
     @Override
@@ -268,9 +283,24 @@ public class CustomVideoSettings extends GuiScreen implements GuiResponder {
                 saveSettings();
                 mc.displayGuiScreen(parentScreen);
                 break;
+            case 10: // FPS Limit
+                cycleFpsLimit();
+                button.displayString = "FPS Limit: " + getFpsLimitString();
+                break;
         }
         
         saveSettings();
+    }
+
+    private void cycleFpsLimit() {
+        switch (fpsLimit) {
+            case 0: fpsLimit = 60; break;
+            case 60: fpsLimit = 120; break;
+            case 120: fpsLimit = 240; break;
+            case 240: fpsLimit = 0; break;
+            default: fpsLimit = 60; break;
+        }
+        gameSettings.limitFramerate = fpsLimit;
     }
 
     private void applyAdrenoOptimizations() {

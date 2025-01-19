@@ -5,6 +5,7 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 ## ✨ Features
 
 ### 🚀 Performance Optimizations
+- Advanced OpenGL state management and caching
 - Smart explosion particle reduction
 - Optimized chunk loading and rendering
 - Efficient memory management
@@ -27,6 +28,7 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - Advanced texture quality controls
 - Intuitive scrollable interface
 - Real-time setting preview
+- FPS limit options (60/120/240/Unlimited)
 
 ### 📱 Android-Specific Features
 - Smart CPU load management
@@ -55,6 +57,8 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - FPS history tracking
 - GL state optimization
 - Movement-based adjustments
+- OpenGL state caching
+- Batch rendering support
 
 ### Compatibility
 - Works seamlessly with OptiFine
@@ -75,6 +79,7 @@ A lightweight performance optimization mod for Minecraft 1.8.9 that enhances FPS
 - Real-time performance monitoring
 - Easy-to-use interface
 - Android-optimized controls
+- Customizable FPS limits
 
 ## 📈 Performance Impact
 
@@ -88,6 +93,7 @@ Typical improvements:
 - Improved Android performance
 - Enhanced movement smoothness
 - Better touch input responsiveness
+- Optimized OpenGL states
 
 ## 🎯 Recommended Settings
 
@@ -98,6 +104,7 @@ Typical improvements:
 - Fast Math: ON
 - Chunk Updates: 1
 - Adreno Optimizations: ON
+- FPS Limit: 60
 
 ### Mid-Range Android:
 - Particle Level: Decreased
@@ -106,6 +113,7 @@ Typical improvements:
 - Fast Math: ON
 - Chunk Updates: 2
 - Adreno Optimizations: ON
+- FPS Limit: 120
 
 ### High-End Android:
 - Particle Level: All
@@ -114,6 +122,7 @@ Typical improvements:
 - Fast Math: Optional
 - Chunk Updates: 2-3
 - Adreno Optimizations: Optional
+- FPS Limit: 240 or Unlimited
 
 ## 🔍 Known Issues
 

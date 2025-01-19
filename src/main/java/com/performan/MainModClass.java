@@ -18,6 +18,8 @@ import com.performan.gui.CustomVideoSettings;
 import com.performan.optimization.ExplosionReduce;
 import com.performan.optimization.CPUReduce;
 import com.performan.optimization.FPSDrop;
+import com.performan.optimization.OpenGL;
+import com.performan.texture.SafeTextureLoader;
 
 @Mod(
     modid = MainModClass.MODID,
@@ -44,7 +46,17 @@ public class MainModClass {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ExplosionReduce());
         MinecraftForge.EVENT_BUS.register(new CPUReduce());
+        MinecraftForge.EVENT_BUS.register(new OpenGL());
         MinecraftForge.EVENT_BUS.register(new FPSDrop());
+        MinecraftForge.EVENT_BUS.register(new SafeTextureLoader());
+        
+        // Disable mipmaps and other problematic features
+        System.setProperty("fml.skipFirstTextureLoad", "true");
+        System.setProperty("forge.forceNoStencil", "true");
+        System.setProperty("fml.ignorePatchDiscrepancies", "true");
+        System.setProperty("fml.ignoreInvalidMinecraftCertificates", "true");
+        System.setProperty("forge.forgeLightPipelineEnabled", "false");
+        System.setProperty("forge.disableMipmapGeneration", "true");
     }
 
     @EventHandler
@@ -54,20 +66,22 @@ public class MainModClass {
     }
 
     private void applyBaseOptimizations(Minecraft mc) {
+        // Completely disable mipmaps
+        mc.gameSettings.mipmapLevels = 0;
         mc.gameSettings.renderDistanceChunks = 6;
         mc.gameSettings.fancyGraphics = false;
         mc.gameSettings.useVbo = true;
         mc.gameSettings.particleSetting = 2;
         mc.gameSettings.enableVsync = false;
-        mc.gameSettings.mipmapLevels = 0;
         mc.gameSettings.anaglyph = false;
         mc.gameSettings.ambientOcclusion = 0;
         mc.gameSettings.fboEnable = true;
         
-        System.setProperty("fml.ignorePatchDiscrepancies", "true");
-        System.setProperty("fml.ignoreInvalidMinecraftCertificates", "true");
-        
+        // Save settings immediately
         mc.gameSettings.saveOptions();
+        
+        // Force a resource reload with safe settings
+        mc.refreshResources();
     }
 
     @SubscribeEvent

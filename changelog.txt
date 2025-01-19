@@ -1,6 +1,46 @@
 # Performan Changelog
 
-## Version 1.1.0 (Latest)
+## Version 1.2.0 (Latest)
+
+### ✨ New Features
+- Added customizable FPS limit options (60/120/240/Unlimited)
+- Implemented advanced OpenGL state management
+- Added OpenGL state caching system
+- Introduced batch rendering support
+- Added platform-specific OpenGL optimizations
+- Implemented dynamic GL state optimization
+
+### 🚀 Performance Improvements
+- Optimized OpenGL state changes
+- Enhanced texture parameter management
+- Improved rendering batch processing
+- Added smart state caching
+- Reduced GPU state changes
+- Implemented efficient texture binding
+
+### 🛠️ Technical Improvements
+- Added OpenGL state tracking system
+- Implemented state caching mechanism
+- Created batch rendering system
+- Added platform detection
+- Improved GL hint management
+- Enhanced texture parameter control
+
+### 🎮 Quality of Life
+- Added FPS limit control in settings
+- Improved settings menu organization
+- Enhanced visual quality on high-end devices
+- Better performance presets
+- Smoother rendering transitions
+
+### 🐛 Bug Fixes
+- Fixed OpenGL state management issues
+- Resolved texture binding problems
+- Corrected GL hint application
+- Improved state restoration
+- Fixed batch rendering edge cases
+
+## Version 1.1.0
 
 ### ✨ New Features
 - Added FPS drop handler for Android devices
