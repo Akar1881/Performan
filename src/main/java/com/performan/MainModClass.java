@@ -94,18 +94,6 @@ public class MainModClass {
             mc.gameSettings.clouds = 0;
             mc.gameSettings.guiScale = Math.min(mc.gameSettings.guiScale, 2);
             mc.gameSettings.limitFramerate = 60;
-            mc.gameSettings.ofFastRender = true;
-            mc.gameSettings.ofFastMath = true;
-            mc.gameSettings.ofSmoothFps = false;
-            mc.gameSettings.ofSmoothWorld = false;
-            mc.gameSettings.ofAnimatedWater = 2;
-            mc.gameSettings.ofAnimatedLava = 2;
-            mc.gameSettings.ofAnimatedFire = false;
-            mc.gameSettings.ofAnimatedPortal = false;
-            mc.gameSettings.ofAnimatedRedstone = false;
-            mc.gameSettings.ofAnimatedExplosion = false;
-            mc.gameSettings.ofAnimatedFlame = false;
-            mc.gameSettings.ofAnimatedSmoke = false;
         } else {
             // PC settings
             mc.gameSettings.mipmapLevels = 4;
