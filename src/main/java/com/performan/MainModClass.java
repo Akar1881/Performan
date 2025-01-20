@@ -51,25 +51,25 @@ public class MainModClass {
         MinecraftForge.EVENT_BUS.register(new OpenGL());
         MinecraftForge.EVENT_BUS.register(new FPSDrop());
         
-        // Mobile-specific optimizations
         if (isAndroid) {
+            // Core optimizations
             System.setProperty("fml.skipFirstTextureLoad", "true");
-            System.setProperty("forge.forceNoStencil", "true");
             System.setProperty("fml.ignorePatchDiscrepancies", "true");
             System.setProperty("fml.ignoreInvalidMinecraftCertificates", "true");
-            System.setProperty("forge.forgeLightPipelineEnabled", "false");
-            System.setProperty("forge.disableMipmapGeneration", "true");
-            System.setProperty("forge.disableVboRendering", "true");
-            System.setProperty("forge.disableStencilBuffers", "true");
-            System.setProperty("forge.disableDepthBuffer", "false");
-            System.setProperty("forge.forceGL20", "false");
-            System.setProperty("forge.disableShaders", "true");
-            System.setProperty("forge.disableTextureAnimations", "true");
-            System.setProperty("forge.skipGLStateChecks", "true");
-            System.setProperty("forge.disableModelLoading", "false");
-            System.setProperty("forge.enableGLDebugLog", "true");
-            System.setProperty("forge.disableDisplayLists", "true");
+            
+            // Memory optimizations
             System.setProperty("forge.forceDirectMemoryAccess", "false");
+            System.setProperty("forge.enableGLDebugLog", "false");
+            
+            // Disable features
+            System.setProperty("forge.disableTextureAnimations", "true");
+            System.setProperty("forge.disableModelLoading", "true");
+            
+            // LWJGL fixes
+            System.setProperty("org.lwjgl.opengl.Display.allowSoftwareOpenGL", "true");
+            System.setProperty("org.lwjgl.opengl.Display.enableHighDPI", "false");
+            System.setProperty("org.lwjgl.util.Debug", "false");
+            System.setProperty("org.lwjgl.opengl.Display.noinput", "false");
         }
     }
 
@@ -94,6 +94,13 @@ public class MainModClass {
             mc.gameSettings.clouds = 0;
             mc.gameSettings.guiScale = Math.min(mc.gameSettings.guiScale, 2);
             mc.gameSettings.limitFramerate = 60;
+            
+            // Force lowest graphics settings
+            mc.gameSettings.showDebugInfo = false;
+            mc.gameSettings.enableVsync = false;
+            mc.gameSettings.snooperEnabled = false;
+            mc.gameSettings.showDebugProfilerChart = false;
+            mc.gameSettings.touchscreen = true;
         } else {
             // PC settings
             mc.gameSettings.mipmapLevels = 4;
