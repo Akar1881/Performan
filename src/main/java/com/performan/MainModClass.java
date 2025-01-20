@@ -19,7 +19,6 @@ import com.performan.optimization.ExplosionReduce;
 import com.performan.optimization.CPUReduce;
 import com.performan.optimization.FPSDrop;
 import com.performan.optimization.OpenGL;
-import com.performan.texture.SafeTextureLoader;
 
 @Mod(
     modid = MainModClass.MODID,
@@ -30,7 +29,7 @@ import com.performan.texture.SafeTextureLoader;
 public class MainModClass {
     public static final String MODID = "performan";
     public static final String NAME = "Performan Optimizer";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.3.0";
 
     private static final KeyBinding TOGGLE_SETTINGS = new KeyBinding(
         "Open Performance Settings",
@@ -40,23 +39,38 @@ public class MainModClass {
 
     private int tickCounter = 0;
     private static final int GARBAGE_COLLECTION_INTERVAL = 6000;
+    private boolean isAndroid;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        isAndroid = System.getProperty("java.vendor", "").toLowerCase().contains("android");
+        
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ExplosionReduce());
         MinecraftForge.EVENT_BUS.register(new CPUReduce());
         MinecraftForge.EVENT_BUS.register(new OpenGL());
         MinecraftForge.EVENT_BUS.register(new FPSDrop());
-        MinecraftForge.EVENT_BUS.register(new SafeTextureLoader());
         
-        // Disable mipmaps and other problematic features
-        System.setProperty("fml.skipFirstTextureLoad", "true");
-        System.setProperty("forge.forceNoStencil", "true");
-        System.setProperty("fml.ignorePatchDiscrepancies", "true");
-        System.setProperty("fml.ignoreInvalidMinecraftCertificates", "true");
-        System.setProperty("forge.forgeLightPipelineEnabled", "false");
-        System.setProperty("forge.disableMipmapGeneration", "true");
+        // Mobile-specific optimizations
+        if (isAndroid) {
+            System.setProperty("fml.skipFirstTextureLoad", "true");
+            System.setProperty("forge.forceNoStencil", "true");
+            System.setProperty("fml.ignorePatchDiscrepancies", "true");
+            System.setProperty("fml.ignoreInvalidMinecraftCertificates", "true");
+            System.setProperty("forge.forgeLightPipelineEnabled", "false");
+            System.setProperty("forge.disableMipmapGeneration", "true");
+            System.setProperty("forge.disableVboRendering", "true");
+            System.setProperty("forge.disableStencilBuffers", "true");
+            System.setProperty("forge.disableDepthBuffer", "false");
+            System.setProperty("forge.forceGL20", "false");
+            System.setProperty("forge.disableShaders", "true");
+            System.setProperty("forge.disableTextureAnimations", "true");
+            System.setProperty("forge.skipGLStateChecks", "true");
+            System.setProperty("forge.disableModelLoading", "false");
+            System.setProperty("forge.enableGLDebugLog", "true");
+            System.setProperty("forge.disableDisplayLists", "true");
+            System.setProperty("forge.forceDirectMemoryAccess", "false");
+        }
     }
 
     @EventHandler
@@ -66,16 +80,44 @@ public class MainModClass {
     }
 
     private void applyBaseOptimizations(Minecraft mc) {
-        // Completely disable mipmaps
-        mc.gameSettings.mipmapLevels = 0;
-        mc.gameSettings.renderDistanceChunks = 6;
-        mc.gameSettings.fancyGraphics = false;
-        mc.gameSettings.useVbo = true;
-        mc.gameSettings.particleSetting = 2;
-        mc.gameSettings.enableVsync = false;
-        mc.gameSettings.anaglyph = false;
-        mc.gameSettings.ambientOcclusion = 0;
-        mc.gameSettings.fboEnable = true;
+        if (isAndroid) {
+            // Mobile-specific settings
+            mc.gameSettings.mipmapLevels = 0;
+            mc.gameSettings.renderDistanceChunks = 4;
+            mc.gameSettings.fancyGraphics = false;
+            mc.gameSettings.useVbo = false;
+            mc.gameSettings.particleSetting = 2;
+            mc.gameSettings.enableVsync = false;
+            mc.gameSettings.anaglyph = false;
+            mc.gameSettings.ambientOcclusion = 0;
+            mc.gameSettings.fboEnable = false;
+            mc.gameSettings.clouds = 0;
+            mc.gameSettings.guiScale = Math.min(mc.gameSettings.guiScale, 2);
+            mc.gameSettings.limitFramerate = 60;
+            mc.gameSettings.ofFastRender = true;
+            mc.gameSettings.ofFastMath = true;
+            mc.gameSettings.ofSmoothFps = false;
+            mc.gameSettings.ofSmoothWorld = false;
+            mc.gameSettings.ofAnimatedWater = 2;
+            mc.gameSettings.ofAnimatedLava = 2;
+            mc.gameSettings.ofAnimatedFire = false;
+            mc.gameSettings.ofAnimatedPortal = false;
+            mc.gameSettings.ofAnimatedRedstone = false;
+            mc.gameSettings.ofAnimatedExplosion = false;
+            mc.gameSettings.ofAnimatedFlame = false;
+            mc.gameSettings.ofAnimatedSmoke = false;
+        } else {
+            // PC settings
+            mc.gameSettings.mipmapLevels = 4;
+            mc.gameSettings.renderDistanceChunks = 8;
+            mc.gameSettings.fancyGraphics = true;
+            mc.gameSettings.useVbo = true;
+            mc.gameSettings.particleSetting = 0;
+            mc.gameSettings.enableVsync = true;
+            mc.gameSettings.ambientOcclusion = 2;
+            mc.gameSettings.fboEnable = true;
+            mc.gameSettings.clouds = 2;
+        }
         
         // Save settings immediately
         mc.gameSettings.saveOptions();

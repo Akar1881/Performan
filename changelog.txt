@@ -1,5 +1,57 @@
 # Performan Changelog
 
+## Version 1.3.0 (Latest)
+
+### ✨ New Features
+- Added customizable brightness levels (Moody/50%/Night Vision)
+- Enhanced OpenGL state management system
+- Improved batch rendering capabilities
+- Added dynamic GL state optimization
+- Implemented advanced texture parameter control
+- Added platform-specific OpenGL optimizations
+- Enhanced movement detection system
+- Improved adaptive sensitivity control
+
+### 🚀 Performance Improvements
+- Optimized OpenGL state changes and caching
+- Enhanced texture parameter management
+- Improved rendering batch processing
+- Added smart state caching
+- Reduced GPU state changes
+- Implemented efficient texture binding
+- Enhanced movement-based optimizations
+- Improved FPS stabilization during rapid movement
+
+### 🛠️ Technical Improvements
+- Added OpenGL state tracking system
+- Implemented state caching mechanism
+- Enhanced batch rendering system
+- Added platform detection improvements
+- Improved GL hint management
+- Enhanced texture parameter control
+- Optimized CPU load management
+- Improved memory usage tracking
+
+### 🎮 Quality of Life
+- Added brightness level control in settings
+- Improved settings menu organization
+- Enhanced visual quality on high-end devices
+- Better performance presets
+- Smoother rendering transitions
+- Enhanced touch input responsiveness
+- Improved movement smoothness
+- Better adaptive performance scaling
+
+### 🐛 Bug Fixes
+- Fixed OpenGL state management issues
+- Resolved texture binding problems
+- Corrected GL hint application
+- Improved state restoration
+- Fixed batch rendering edge cases
+- Enhanced memory cleanup
+- Improved FPS stability
+- Fixed movement detection accuracy
+
 ## Version 1.2.0 (Latest)
 
 ### ✨ New Features

@@ -14,6 +14,11 @@
 - Customizable performance settings
 - Android-specific optimizations
 - FPS drop prevention during rapid movement
+- Improved OpenGL state caching
+- Enhanced batch rendering support
+- Dynamic GL state optimization
+- Smart movement detection
+- Adaptive sensitivity control
 
 ### Enhanced Settings Menu
 - Intuitive video settings interface
@@ -24,6 +29,7 @@
 - VSync controls
 - Dynamic chunk loading controls
 - OpenGL state optimization
+- Brightness levels (Moody/50%/Night Vision)
 
 ### Android-Specific Features
 - Smart CPU load reduction
@@ -35,6 +41,9 @@
 - Smart screen movement detection
 - Adaptive sensitivity control
 - Optimized OpenGL states for mobile
+- Enhanced texture parameter control
+- Platform-specific optimizations
+- Improved touch input responsiveness
 
 ## 🔧 Installation
 
@@ -58,6 +67,7 @@ Press 'P' (default key, configurable) to open the Performan Settings menu.
 - VSync
 - Fast Math
 - FPS Limit (60/120/240/Unlimited)
+- Brightness (Moody/50%/Night Vision)
 
 ## 🔍 Compatibility
 
@@ -77,6 +87,7 @@ Typical performance improvements:
 - Improved touch input responsiveness
 - Enhanced movement smoothness
 - Optimized OpenGL state management
+- Better texture parameter control
 
 ## 🎯 Recommended Settings
 
@@ -88,6 +99,7 @@ Typical performance improvements:
 - Chunk Updates: 1
 - Adreno Optimizations: ON
 - FPS Limit: 60
+- Brightness: User preference
 
 ### Mid-Range Android Devices:
 - Particle Level: Decreased
@@ -97,6 +109,7 @@ Typical performance improvements:
 - Chunk Updates: 2
 - Adreno Optimizations: ON
 - FPS Limit: 120
+- Brightness: User preference
 
 ### High-End Android Devices:
 - Particle Level: All
@@ -106,6 +119,7 @@ Typical performance improvements:
 - Chunk Updates: 2-3
 - Adreno Optimizations: Optional
 - FPS Limit: 240 or Unlimited
+- Brightness: User preference
 
 ## 🔗 Links
 
