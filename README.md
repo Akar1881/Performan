@@ -109,7 +109,7 @@ Typical performance improvements:
 
 ## 🔗 Links
 
-- [Modrinth Page](https://modrinth.com/mod/performan)
+- [Modrinth Page](https://modrinth.com/mod/peforman)
 - [GitHub Repository](https://github.com/Akar1881/Performan)
 - [Bug Reports](https://github.com/Akar1881/Performan/issues)
 
